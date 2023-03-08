@@ -1,0 +1,15 @@
+C:\Users\shisk\OneDrive\Рабочий стол\lesson8_recursion\lesson8_recursion\classroom\bin\Debug\net6.0\classroom.exe
+C:\Users\shisk\OneDrive\Рабочий стол\lesson8_recursion\lesson8_recursion\classroom\bin\Debug\net6.0\classroom.deps.json
+C:\Users\shisk\OneDrive\Рабочий стол\lesson8_recursion\lesson8_recursion\classroom\bin\Debug\net6.0\classroom.runtimeconfig.json
+C:\Users\shisk\OneDrive\Рабочий стол\lesson8_recursion\lesson8_recursion\classroom\bin\Debug\net6.0\classroom.dll
+C:\Users\shisk\OneDrive\Рабочий стол\lesson8_recursion\lesson8_recursion\classroom\bin\Debug\net6.0\classroom.pdb
+C:\Users\shisk\OneDrive\Рабочий стол\lesson8_recursion\lesson8_recursion\classroom\obj\Debug\net6.0\classroom.csproj.AssemblyReference.cache
+C:\Users\shisk\OneDrive\Рабочий стол\lesson8_recursion\lesson8_recursion\classroom\obj\Debug\net6.0\classroom.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shisk\OneDrive\Рабочий стол\lesson8_recursion\lesson8_recursion\classroom\obj\Debug\net6.0\classroom.AssemblyInfoInputs.cache
+C:\Users\shisk\OneDrive\Рабочий стол\lesson8_recursion\lesson8_recursion\classroom\obj\Debug\net6.0\classroom.AssemblyInfo.cs
+C:\Users\shisk\OneDrive\Рабочий стол\lesson8_recursion\lesson8_recursion\classroom\obj\Debug\net6.0\classroom.csproj.CoreCompileInputs.cache
+C:\Users\shisk\OneDrive\Рабочий стол\lesson8_recursion\lesson8_recursion\classroom\obj\Debug\net6.0\classroom.dll
+C:\Users\shisk\OneDrive\Рабочий стол\lesson8_recursion\lesson8_recursion\classroom\obj\Debug\net6.0\refint\classroom.dll
+C:\Users\shisk\OneDrive\Рабочий стол\lesson8_recursion\lesson8_recursion\classroom\obj\Debug\net6.0\classroom.pdb
+C:\Users\shisk\OneDrive\Рабочий стол\lesson8_recursion\lesson8_recursion\classroom\obj\Debug\net6.0\classroom.genruntimeconfig.cache
+C:\Users\shisk\OneDrive\Рабочий стол\lesson8_recursion\lesson8_recursion\classroom\obj\Debug\net6.0\ref\classroom.dll
