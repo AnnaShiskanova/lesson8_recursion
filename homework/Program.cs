@@ -138,4 +138,99 @@ static void Task56()
         Console.WriteLine($"{minSumString+1} - строкa с наименьшей суммой элементов (сумма равна {sumString})");
 
 }
-Task56();
+
+static void Task58()
+{
+    /*Задача 58: Задайте две матрицы. Напишите программу, которая
+    будет находить произведение двух матриц.
+    Например, даны 2 матрицы:
+    2 4 | 3 4
+    3 2 | 3 3
+    Результирующая матрица будет:
+    18 20
+    15 18
+    
+    Матрицы A и B могут быть перемножены, если они совместимы в том смысле, 
+    что число столбцов матрицы A равно числу строк B.*/
+
+    System.Console.WriteLine("первая матрица");
+    int[,] firstArray = TwoRandomArray();
+    System.Console.WriteLine("\n");
+    
+
+    System.Console.WriteLine("вторая матрица");
+    int[,] secondArray = TwoRandomArray();
+    System.Console.WriteLine("\n");
+    
+    int[,] TwoRandomArray()
+    {
+        Console.WriteLine("Введите количество строк двумерного массива: ");
+        int m = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите количество столбцов двумерного массива: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+        int[,] array = new int[m, n];
+
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            Console.WriteLine();
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+            array[i, j] = new Random().Next(1, 11);
+            Console.Write(array[i, j] + " ");
+            }
+        }
+    return array;
+    }
+
+    //проверка на правило//
+    void Rules(int[,] firstArray, int[,] secondArray)
+    {
+        
+                    if (firstArray.GetLength(0) != secondArray.GetLength(1))
+                    System.Console.Write("матрицы не могут быть перемножены");
+                    else
+                    MultiplyArray(firstArray, secondArray);
+        
+    }
+    Rules(firstArray, secondArray);
+
+    int[,] MultiplyArray(int[,] firstArray, int[,] secondArray)
+    {
+        int[,] resultArray = new int[firstArray.GetLength(0), secondArray.GetLength(1)];
+        
+        int sum = 0;
+        int c = 0; //count
+        for (int i = 0; i < firstArray.GetLength(0); i++)
+        {
+            for (int j = 0; j < secondArray.GetLength(1); j++)
+            {
+                sum += firstArray[i, c] * secondArray[c, j];  
+                resultArray[i, j] = sum;
+
+            }
+
+            
+
+        }
+        
+
+        return resultArray;
+
+    }
+    
+    void ShowDuoArray(int[,] resultArray) 
+    {
+        Console.WriteLine();
+        for (int i = 0; i < resultArray.GetLength(0); i++)
+        {
+            Console.WriteLine();
+            for (int j = 0; j < resultArray.GetLength(1); j++)
+                {
+                    Console.Write(resultArray[i, j] + " ");
+                }
+        }
+    }
+    ShowDuoArray(MultiplyArray(firstArray, secondArray));
+    
+}
+Task58();
