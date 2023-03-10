@@ -44,20 +44,7 @@
             
             for (int j = 0; j < array.GetLength(1); j++)
             {
-            //     int elementMax = array[0, j];
-            //     int count = 0;
-                       
-            //     if (array[i, j] > elementMax && count < m)
-            //     {
-            //         elementMax = array[i, j];
-            //         array[i, j] = array[m - 1, j];
-            //         array[m - 1, j] = elementMax;
-            //         count++;
-            //     }
-            //     else
-            //     count = 0;
-            //     count++;
-
+            
                  for (int k = 0; k < array.GetLength(1) - 1; k++)
                 {
                 if (array[i, k] < array[i, k + 1])
@@ -91,4 +78,64 @@
     ReadArray(ChangedArray(array));
 }
 
-Task54();
+static void Task56()
+{
+    /*Задача 56: Задайте прямоугольный двумерный массив. 
+    Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+    Например, задан массив:
+    1 4 7 2
+    5 9 2 3
+    8 4 2 4
+    5 2 6 7
+    Программа считает сумму элементов в каждой строке и 
+    выдаёт номер строки с наименьшей суммой элементов: 1 строка*/
+
+    int[,] array = TwoRandomArray();
+    System.Console.WriteLine("\n");
+
+    int[,] TwoRandomArray()
+    {
+        Console.WriteLine("Введите количество строк двумерного массива: ");
+        int m = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите количество столбцов двумерного массива: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+        int[,] array = new int[m, n];
+
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            Console.WriteLine();
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+            array[i, j] = new Random().Next(1, 11);
+            Console.Write(array[i, j] + " ");
+            }
+        }
+    return array;
+    }
+
+    int SumStringElements(int[,] array, int i)
+    {
+        int sumString = array[i,0];
+        for (int j = 1; j < array.GetLength(1); j++)
+        {
+            sumString += array[i,j];
+        }
+        return sumString;
+    }
+
+        int minSumString = 0;
+        int sumString = SumStringElements(array, 0);
+        for (int i = 1; i < array.GetLength(0); i++)
+        {
+            int tmp = SumStringElements(array, i);
+            if (sumString > tmp)
+            {
+                sumString = tmp;
+                minSumString = i;
+            }
+        }
+
+        Console.WriteLine($"{minSumString+1} - строкa с наименьшей суммой элементов (сумма равна {sumString})");
+
+}
+Task56();
