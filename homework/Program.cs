@@ -234,7 +234,7 @@ static void Task58()
     
 }
 
-static void Task60()
+static void Task60() //я так и не смогла сделать элементы матрицы уникальными//
 {
     /*Задача 60. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
     Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
@@ -310,4 +310,73 @@ static void Task60()
     }
     UniqueElements(array);*/
 }
-Task60();
+
+static void Task62()
+{
+/*Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
+Например, на выходе получается вот такой массив:
+01 02 03 04
+12 13 14 05
+11 16 15 06
+10 09 08 07*/
+
+    int[,] array = TwoRandomArray();
+
+    int[,] TwoRandomArray()
+    {
+        int[,] array = new int[4, 4];
+        
+
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            Console.WriteLine();
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+                int n = array.GetLength(0);
+                int m = array.GetLength(1);
+                int count = 0;
+                int tmp = array[i, j];
+        
+                if (i == n && j == m)
+                {
+                    tmp++;
+                    count++;
+                }
+                else if(i == n && j == m - 1)
+                {
+                    tmp++;
+                    count++;
+                }
+                else if(i == n - 1 && j == m - 1)
+                {
+                    tmp++;
+                    
+                    count--;
+                }
+                else if(i == n - 2 && j == m - 2)
+                {
+                    tmp++;
+                    count--;
+                }
+                else if( j == m - 3 && i == n - 2)
+                {
+                    tmp++;
+                    count++;
+                }
+                else if( j == m - 3 && i == n - 3)
+                {
+                    tmp++;
+                    count++;
+                }
+                else
+                               
+                Console.Write(array[i, j] + " ");
+            }
+        }
+    return array;
+    }
+
+    
+
+}
+Task62();
